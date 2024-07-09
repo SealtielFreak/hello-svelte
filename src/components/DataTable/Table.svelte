@@ -5,20 +5,13 @@
 	let itemInput: string = '';
 
 	let showDialog: boolean = false;
-	let inputDialog: string = '';
 	let indexItemEditable: number = -1;
 
 	const editItemByIndex = (index: number) => {
 		return () => {
 			showDialog = true;
 			indexItemEditable = index;
-			inputDialog = items[index];
 		};
-	};
-
-	const saveItemEdit = (inputDialog: string) => {
-		items[indexItemEditable] = inputDialog;
-		showDialog = false;
 	};
 
 	const removeItemByIndex = (index: number) => {
